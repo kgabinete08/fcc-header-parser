@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const useragent = require('express-useragent');
+const requestIp = require('request-ip');
 
 const index = require('./routes/index');
 
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(useragent.express());
+app.use(requestIp.mw());
 
 app.use('/', index);
 
