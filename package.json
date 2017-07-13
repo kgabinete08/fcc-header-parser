@@ -2,6 +2,9 @@
   "name": "header-parser",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "7.10.1"
+  },
   "scripts": {
     "start": "node ./start.js"
   },
